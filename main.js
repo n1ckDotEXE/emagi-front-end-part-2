@@ -4,15 +4,12 @@ const encodeWord = require('./encode-word.js');
 const command = process.argv[2];
 const words = process.argv.slice(3);
 
-const translation = words.map(translateWord);
-const encoding = words.map(encodeWord);
-
 switch(command) {
     case 'translate':
-        console.log(translation.join(' '));
+        console.log(words.map(translateWord).join(' '));
         break;
     case 'encode':
-        console.log(encoding.join(' '));
+        console.log(words.map(encodeWord).join(' '));
         break;
     default:
         console.log('Please enter a valid argument (translate or encode)');    

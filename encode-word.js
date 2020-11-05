@@ -1,19 +1,16 @@
 const emojis = require('./emojis.js');
 
-
-// // string-building version
 const encodeWord = function(word) {
-    let result = '';
-    for (const char of word) {
+    const letters = word.split('');
+    const symbols = letters.map(function (char) {
         for (const emoji of emojis) {
             if (emoji.letter === char.toLowerCase()) {
-                result += emoji.symbol;
-            } else {
-                result += char;
+                return emoji.symbol;
             }
         }
-    }
-    return result;
+        return char;
+    })
+    return symbols.join();
 }
 
-module.export = encodeWord;
+module.exports = encodeWord;
