@@ -17,17 +17,3 @@ const encodeWord = function(word) {
 }
 
 module.export = encodeWord;
-
-// module.exports =  encodeWord = word => {
-//     let result = '';
-//     for(i in word) {
-//         for(j in emojis) {
-//             if(word[i].toLowerCase() === emojis[j].letter) {
-//                 result += emojis[j].symbol;
-//             } else {
-//                 result += word[i];
-//             }
-//         }
-//     }
-//     return result;
-// }
